@@ -29,10 +29,9 @@ const ManageUsers = () => {
   }, [currentPage]);
 
   const handlePageClick = (event) => {
-    console.log(event);
     setCurrentPage(event.selected + 1);
   };
-
+  console.log(items);
   const Items = ({ items }) => (
     <div >
       {items && (
@@ -84,7 +83,7 @@ const ManageUsers = () => {
                       <td>{u.phone}</td>
                       <td>{u.role}</td>
                       <td>
-                        <Link to={`/admin/updateuser`}><button onClick={() => { }}><i class='bx bx-edit'></i></button></Link>
+                        <Link to={`/admin/updateuser/${u.userID}`}><button onClick={() => { }}><i class='bx bx-edit'></i></button></Link>
                         <button><i class='bx bx-trash'></i></button>
                       </td>
                     </tr>

@@ -32,7 +32,9 @@ function App() {
           <Route path='/admin/crudproduct/addproduct' element={<AddProduct />} />
           <Route path='/admin/crudproduct' element={<CRUDProduct />} />
           <Route path='/admin/manageusers' element={<ManageUsers />} />
-          <Route path='admin/updateuser' element={<UpdateUser />} />
+          <Route path='admin/updateuser' element={<UpdateUser />} >
+            <Route path=':userId' element={<UpdateUser />} />
+          </Route>
           <Route path='/admin/crudproduct/updateproduct' element={<UpdateProduct />}>
             <Route path=':productId' element={<UpdateProduct />} />
           </Route>
